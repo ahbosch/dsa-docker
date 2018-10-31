@@ -11,6 +11,7 @@ ENV DIST_URL ${DIST_URL}
 
 COPY run.sh /app/
 
+RUN chmod +x /app/*.sh
 RUN \
   wget ${DIST_URL} -O build.zip && \
   unzip build.zip && \
